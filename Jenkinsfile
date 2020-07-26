@@ -6,5 +6,6 @@ pipeline {
                 sh 'echo "Hello World"'
                 sh 'systemctl status jenkins'
                 sh 'df -h'
-                sh '''
-                    echo "Multiline shell steps works too"
+                    }
+        }
+    }
