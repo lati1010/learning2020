@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('test2') {
             steps {
                 sh 'echo "Hello World"'
                 sh 'df -h'
