@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('test2') {
+        stage('Terraform_Installation') {
             steps {
-                sh 'echo "Hello World"'
-                sh 'systemctl status jenkins'
-                sh 'df -h'
-                    }
+                sh 'wget https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_linux_amd64.zip'
+                sh 'pwd'
+            }
         }
     }
+}
