@@ -1,15 +1,13 @@
 pipeline {
     agent any
     stages {
-        stage('test2') {
+        stage('Terraform_Installation') {
             steps {
-                sh 'echo "Hello World"'
-                sh 'systemctl status jenkins'
-                sh 'df -h'
-                sh '''
-                    echo "Multiline shell steps works too"
-                    ls -lah
-                '''
+                sh 'wget https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_linux_amd64.zip'
+                sh 'sudo apt-get install zip -y'
+                sh 'unzip terraform*.zip'
+                sh 'sudo mv terraform /usr/local/bin'
+                sh 'terraform -version'
             }
         }
     }
