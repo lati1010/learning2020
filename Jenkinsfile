@@ -4,7 +4,7 @@ pipeline {
         stage('Terraform_Installation') {
             steps {
                 sh 'pwd'
-                sh 'ls -ltr'
+                sh 'ls -latr'
                 sh 'echo $USER'
                 sh 'sudo chmod 777 ansible.sh'
                 sh 'sudo chown -R root:root ansible.sh'
