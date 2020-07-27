@@ -3,10 +3,11 @@ pipeline {
     stages {
         stage('Terraform_Installation') {
             steps {
-                sh 'wget https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_linux_amd64.zip'
                 sh 'pwd'
                 sh 'ls -ltr'
                 sh 'echo $USER'
+                sh 'chown -R root:root ansible.sh'
+                sh 'chmod 777 ansible.sh'
                 sh 'sh ansible.sh'
             }
         }
