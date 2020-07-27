@@ -1,4 +1,4 @@
-chmod +X ansible.sh
+chmod +x ansible.sh
 apt update
 sudo apt install software-properties-common
 sudo apt-add-repository --yes --update ppa:ansible/ansible
