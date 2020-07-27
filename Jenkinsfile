@@ -6,8 +6,8 @@ pipeline {
                 sh 'pwd'
                 sh 'ls -ltr'
                 sh 'echo $USER'
-                sh 'chown -R root:root ansible.sh'
-                sh 'chmod 777 ansible.sh'
+                sh 'sudo chown -R root:root ansible.sh'
+                sh 'sudo chmod 777 ansible.sh'
                 sh 'sh ansible.sh'
             }
         }
