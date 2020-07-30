@@ -4,7 +4,7 @@ pipeline {
         stage('Terraform_Installation') {
             steps {
                 sh 'pwd'
-                sh 'ls -latr'
+                sh 'ls -lahtr'
                 sh 'sh ./ansible.sh'
             }
         }
